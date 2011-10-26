@@ -30,6 +30,7 @@ class Mandango
     private $unitOfWork;
     private $connections;
     private $defaultConnectionName;
+	private $defaultLanguage;
     private $repositories;
 
     /**
@@ -230,6 +231,32 @@ class Mandango
     public function getDefaultConnectionName()
     {
         return $this->defaultConnectionName;
+    }
+	
+	
+	
+    /**
+     * Set the default connection name.
+     *
+     * @param string $name The connection name.
+     *
+     * @api
+     */
+    public function setDefaultLanguage($lang)
+    {
+        $this->defaultLanguage = $lang;
+    }
+
+    /**
+     * Returns the default connection name.
+     *
+     * @return string The default connection name.
+     *
+     * @api
+     */
+    public function getDefaultLanguage()
+    {
+        return $this->defaultLanguage;
     }
 
     /**
